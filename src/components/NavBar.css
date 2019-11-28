@@ -4,6 +4,11 @@
     border-bottom: 1px solid #dbdbdb;
 }
 
+.nav-link{
+    text-decoration: none;
+    color: #0068de;
+}
+
 .nav-logo{
     font-family: 'Lobster', cursive;
     font-size: 30px;
