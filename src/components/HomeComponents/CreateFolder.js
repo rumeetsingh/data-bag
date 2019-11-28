@@ -27,7 +27,7 @@ class createFole extends React.Component{
 
     render() {
         return (
-            <div className="card mt-3">
+            <div style={{border:"1px solid #4fc4ff"}} className="card mt-3">
                 <form onSubmit={this.onSubmit}>
                     <div style={{padding:"0px 10px"}} className="row align-items-center">
                         <div className="col-lg-9 col-md-7">

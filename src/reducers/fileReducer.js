@@ -7,6 +7,7 @@ export default (state={},action) => {
             return {
                 ...state,
                 [action.payload.fileId] : {
+                    "name" : action.payload.name,
                     "link" : action.payload.link,
                     "parentFolder" : action.payload.parentFolder,
                 }

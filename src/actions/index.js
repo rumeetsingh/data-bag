@@ -18,11 +18,12 @@ export const createFolder = (name,parentId) => {
     }
 }
 
-export const createFile = (link,parentId) => {
+export const createFile = (name,link,parentId) => {
     return {
         type : CREATE_FILE,
         payload : {
             "fileId" : uuid.v4(),
+            "name" : name,
             "link" : link,
             "parentFolder" : parentId,
         }

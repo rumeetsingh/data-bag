@@ -10,7 +10,7 @@ class FilesList extends React.Component{
         if (this.props.folders[this.props.folderId].files.length===0){
             return (
                 <div className="col-md-3">
-                    <div style={{padding:"10px"}} className="mt-3">No Folders Here!</div>
+                    <div style={{padding:"10px"}} className="mt-3">No Files Here!</div>
                 </div>
             );
         }
@@ -18,10 +18,12 @@ class FilesList extends React.Component{
         return this.props.folders[this.props.folderId].files.map(file => {
             return (
                 <div key={file} className="col-md-3">
-                    <a className="no-link-style" href={this.props.files[file].link}>
+                    <a className="no-link-style" href={this.props.files[file].link} rel="noopener noreferrer" target="_blank">
                         <div className="card-folder no-select mt-3 cursor-pointer">
                             <div className="card-item-folder">
-                                <FontAwesomeIcon icon={faFile} /> | {_.truncate(this.props.files[file].link,{ length:20 })}
+                                <FontAwesomeIcon icon={faFile} /> | {_.truncate(this.props.files[file].name,{ length:20 })}
+                                <hr />
+                                {_.truncate(this.props.files[file].link,{ length:50 })}
                             </div>
                         </div>
                     </a>
