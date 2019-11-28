@@ -8,6 +8,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 import CreateFile from './HomeComponents/CreateFile';
 import CreateFolder from './HomeComponents/CreateFolder';
+import FilesList from './HomeComponents/FilesList';
 import FoldersList from './HomeComponents/FoldersList';
 import Bread from './HomeComponents/Bread';
 
@@ -57,7 +58,7 @@ class Home extends React.Component{
         if (this.state.createNew==="folder"){
             return <CreateFolder folderId={this.props.match.params.folderId} handle={() => this.hideCreate()} />;
         }else if(this.state.createNew==="file"){
-            return <CreateFile handle={() => this.hideCreate()} />
+            return <CreateFile folderId={this.props.match.params.folderId} handle={() => this.hideCreate()} />
         }
     }
 
@@ -94,6 +95,7 @@ class Home extends React.Component{
                     {this.createInputRender()}
                     {this.renderBread()}
                     <FoldersList folderId={this.props.match.params.folderId} />
+                    <FilesList folderId={this.props.match.params.folderId} />
                 </div>
             </div>
         );

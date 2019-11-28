@@ -1,16 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFolder } from '@fortawesome/free-solid-svg-icons'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
 
+class FilesList extends React.Component{
 
-class FoldersList extends React.Component{
-
-    renderFoldersList = () => {
-
-        if (this.props.folders[this.props.folderId].folders.length===0){
+    renderFilesList = () => {
+        if (this.props.folders[this.props.folderId].files.length===0){
             return (
                 <div className="col-md-3">
                     <div style={{padding:"10px"}} className="mt-3">No Folders Here!</div>
@@ -18,16 +15,16 @@ class FoldersList extends React.Component{
             );
         }
 
-        return this.props.folders[this.props.folderId].folders.map(fol => {
+        return this.props.folders[this.props.folderId].files.map(file => {
             return (
-                <div key={fol} className="col-md-3">
-                    <Link className="no-link-style" to={"/" + fol}>
+                <div key={file} className="col-md-3">
+                    <a className="no-link-style" href={this.props.files[file].link}>
                         <div className="card-folder no-select mt-3 cursor-pointer">
                             <div className="card-item-folder">
-                                <FontAwesomeIcon icon={faFolder} /> | {_.truncate(this.props.folders[fol].name,{ length:20 })}
+                                <FontAwesomeIcon icon={faFile} /> | {_.truncate(this.props.files[file].link,{ length:20 })}
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             );
         })
@@ -37,10 +34,10 @@ class FoldersList extends React.Component{
         return (
             <div style={{padding:"20px"}} className="card mt-3">
                 <div className="card-lg-header">
-                    Folders
+                    Files
                 </div>
                 <div className="row">
-                    {this.renderFoldersList()}
+                   {this.renderFilesList()}
                 </div>
             </div>
         );
@@ -50,6 +47,7 @@ class FoldersList extends React.Component{
 
 const mapStateToProps = state => ({
     folders : state.folders,
+    files : state.files,
 })
 
-export default connect(mapStateToProps,{})(FoldersList);
+export default connect(mapStateToProps,{})(FilesList);

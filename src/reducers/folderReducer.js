@@ -1,4 +1,4 @@
-import { CREATE_FOLDER } from '../actions/types';
+import { CREATE_FOLDER,CREATE_FILE } from '../actions/types';
 
 
 const INITIAL_STATE = {
@@ -23,6 +23,12 @@ export default (state=INITIAL_STATE,action) => {
                     "files" : [],
                     "parentFolder" : action.payload.parentFolder,
                 }
+            };
+        case CREATE_FILE:
+            let parentIdForFile = action.payload.parentFolder;
+            return {
+                ...state,
+                [parentIdForFile]: {...state[parentIdForFile],"files":[...state[parentIdForFile].files,action.payload.fileId]}
             };
         default:
             return state;
