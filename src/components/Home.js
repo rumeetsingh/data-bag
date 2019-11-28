@@ -1,17 +1,45 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import _ from 'lodash';
+import history from './../history';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 import CreateFile from './HomeComponents/CreateFile';
 import CreateFolder from './HomeComponents/CreateFolder';
 import FoldersList from './HomeComponents/FoldersList';
+import Bread from './HomeComponents/Bread';
 
 
 class Home extends React.Component{
 
-    state = { createNew:null};
+    state = { ready:false,createNew:null };
+
+    componentDidMount = () => {
+        if (_.has(this.props.folders,this.props.match.params.folderId)){
+            this.setState({ready:true});
+        }else{
+            history.push('/home');
+            this.setState({ready:true});
+        }
+    }
+
+    renderBread = () => {
+        if(!this.state.ready){
+            return null;
+        }
+
+        let parent = this.props.folders[this.props.match.params.folderId].parentFolder;
+        let bread = [this.props.match.params.folderId,];
+
+        while (parent!=null){
+            bread.unshift(parent);
+            parent = this.props.folders[parent].parentFolder;
+        }
+
+        return <Bread folders={this.props.folders} data={bread} />;
+    }
 
     hideCreate = () => {
         this.setState({createNew:null})
@@ -46,6 +74,9 @@ class Home extends React.Component{
     }
 
     render() {
+        if(!this.state.ready){
+            return null;
+        }
         return (
             <div className="row">
                 <div className="col-md-2">
@@ -61,6 +92,7 @@ class Home extends React.Component{
                 </div>
                 <div className="col-md-10">
                     {this.createInputRender()}
+                    {this.renderBread()}
                     <FoldersList folderId={this.props.match.params.folderId} />
                 </div>
             </div>

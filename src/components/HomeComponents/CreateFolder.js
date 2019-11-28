@@ -7,6 +7,10 @@ class createFole extends React.Component{
 
     state = { name:"" };
 
+    componentDidMount() {
+        this.refs.input.focus();
+    }
+
     hide = () => {
         this.props.handle();
     }
@@ -28,7 +32,7 @@ class createFole extends React.Component{
                     <div style={{padding:"0px 10px"}} className="row align-items-center">
                         <div className="col-lg-9 col-md-7">
                             <div className="card-item-input">
-                                <input onChange={this.onInputChange} value={this.state.name} className="input w-100" type="text" placeholder="Enter Folder Name" required />
+                                <input ref="input" onChange={this.onInputChange} value={this.state.name} className="input w-100" type="text" placeholder="Enter Folder Name" required />
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-3">

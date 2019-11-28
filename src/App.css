@@ -51,6 +51,10 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
+.bread-lg-header{
+  padding: 10px;
+}
+
 .btn{
   font-family: 'Alatsi', sans-serif;
   font-size: 15px;
