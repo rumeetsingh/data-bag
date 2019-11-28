@@ -20,3 +20,51 @@
 .App-link {
   color: #09d3ac;
 }
+
+.card{
+  border-radius: 25px;
+  padding: 10px 5px;
+  border: 1px solid #dbdbdb;
+}
+
+.card-item{
+  padding: 5px 5px;
+}
+
+.card-item-input{
+  padding: 5px 0px;
+}
+
+.btn{
+  font-family: 'Alatsi', sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-blue{
+  background-color: #4fc4ff;
+  color:white;
+}
+
+.btn-blue:hover{
+  background-color: #00aaff;
+}
+
+.btn-red{
+  background-color: #ff5c5c;
+  color: white;
+}
+
+.btn-red:hover{
+  background-color: #ff3b3b;
+}
+
+.input{
+  border: none;
+  font-size: 15px;
+  padding: 5px 10px;
+}

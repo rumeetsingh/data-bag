@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+input:required {
+  box-shadow:none;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +18,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.w-45{
+  width: 45%;
+}
+
+.w-70{
+  width: 70%;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.mr-5{
+  margin-right: 5px;
 }
