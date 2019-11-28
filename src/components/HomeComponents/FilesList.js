@@ -20,7 +20,7 @@ class FilesList extends React.Component{
                 <div key={file} className="col-md-3">
                     <a className="no-link-style" href={this.props.files[file].link} rel="noopener noreferrer" target="_blank">
                         <div className="card-folder no-select mt-3 cursor-pointer">
-                            <div className="card-item-folder">
+                            <div style={{overflowWrap:"break-word"}} className="card-item-folder">
                                 <FontAwesomeIcon icon={faFile} /> | {_.truncate(this.props.files[file].name,{ length:20 })}
                                 <hr />
                                 {_.truncate(this.props.files[file].link,{ length:50 })}
