@@ -34,7 +34,7 @@ class FilesList extends React.Component{
 
     render() {
         return (
-            <div style={{padding:"20px"}} className="card mt-3">
+            <div style={{padding:"20px"}} className="card mt-3 mb-3">
                 <div className="card-lg-header">
                     Files
                 </div>
