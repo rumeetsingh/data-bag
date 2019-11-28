@@ -15,7 +15,7 @@ const Index = () => {
                 <p>
                     {uuid.v4()}
                 </p>
-                <Link to="home/" className="App-link">
+                <Link to="/home" className="App-link">
                     Go to DataBag
                 </Link>
             </header>

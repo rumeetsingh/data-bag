@@ -4,6 +4,21 @@
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
 
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.no-link-style{
+  text-decoration: none;
+  color: #0059ff;
+}
+
 input:required {
   box-shadow:none;
 }
@@ -18,6 +33,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .text-center{

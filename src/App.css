@@ -35,6 +35,22 @@
   padding: 5px 0px;
 }
 
+.card-folder{
+  border-radius: 25px;
+  padding: 15px 25px;
+  border: 1px solid #dbdbdb;
+}
+
+.card-folder:active{
+  background-color: #e8f0ff;
+  color:#0059ff;
+}
+
+.card-lg-header{
+  padding: 0px 10px 10px 10px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
 .btn{
   font-family: 'Alatsi', sans-serif;
   font-size: 15px;
