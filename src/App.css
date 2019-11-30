@@ -18,42 +18,42 @@
   color: #09d3ac;
 }
 
-.card{
+.card {
   border-radius: 25px;
   padding: 10px 5px;
   border: 1px solid #dbdbdb;
 }
 
-.card-item{
+.card-item {
   padding: 5px 5px;
 }
 
-.card-item-input{
+.card-item-input {
   padding: 5px 0px;
 }
 
-.card-folder{
+.card-folder {
   border-radius: 25px;
   padding: 15px 25px;
   border: 1px solid #dbdbdb;
 }
 
-.card-folder:active{
+.card-folder:active {
   background-color: #e8f0ff;
-  color:#0059ff;
+  color: #0059ff;
 }
 
-.card-lg-header{
+.card-lg-header {
   padding: 0px 10px 10px 10px;
   border-bottom: 1px solid #dbdbdb;
 }
 
-.bread-lg-header{
+.bread-lg-header {
   padding: 10px;
 }
 
-.btn{
-  font-family: 'Alatsi', sans-serif;
+.btn {
+  font-family: "Alatsi", sans-serif;
   font-size: 15px;
   padding: 10px;
   border-radius: 50px;
@@ -62,25 +62,25 @@
   cursor: pointer;
 }
 
-.btn-blue{
+.btn-blue {
   background-color: #4fc4ff;
-  color:white;
+  color: white;
 }
 
-.btn-blue:hover{
+.btn-blue:hover {
   background-color: #00aaff;
 }
 
-.btn-red{
+.btn-red {
   background-color: #ff5c5c;
   color: white;
 }
 
-.btn-red:hover{
+.btn-red:hover {
   background-color: #ff3b3b;
 }
 
-.btn-wlc{
+.btn-wlc {
   background-color: #00aaff;
   color: white;
   font-size: 20px;
@@ -88,26 +88,26 @@
   margin: 10px 0px;
 }
 
-.btn-wlc:hover{
+.btn-wlc:hover {
   background-color: #008bd1;
 }
 
-.input{
+.input {
   border: none;
   font-size: 15px;
   padding: 5px 10px;
 }
 
-.welcome-lg{
+.welcome-lg {
   font-size: 40px;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
-.welcome-sm{
+.welcome-sm {
   font-size: 25px;
-  padding:20px;
+  padding: 20px;
 }
 
-.welcome-love{
+.welcome-love {
   margin: 30px 0px 20px 0px;
 }

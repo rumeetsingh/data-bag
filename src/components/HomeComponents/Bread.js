@@ -12,7 +12,7 @@ const RenderLinks = props => {
 
 const Bread = props => {
     return (
-        <div style={{padding:"10px 20px"}} className="card mt-3">
+        <div style={{ padding: "10px 20px" }} className="card mt-3">
             <div className="bread-lg-header">
                 <RenderLinks list={props.data} folders={props.folders} />
             </div>

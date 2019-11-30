@@ -1,32 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Alatsi&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
-:focus {outline:none;}
-::-moz-focus-inner {border:0;}
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
 
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 
-.no-link-style{
+.no-link-style {
   text-decoration: none;
   color: #0059ff;
 }
 
 input:required {
-  box-shadow:none;
+  box-shadow: none;
 }
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,26 +40,26 @@ code {
     monospace;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.w-45{
+.w-45 {
   width: 45%;
 }
 
-.w-70{
+.w-70 {
   width: 70%;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
-.mr-5{
+.mr-5 {
   margin-right: 5px;
 }

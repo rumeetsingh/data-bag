@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { createFolder } from '../../actions';
 
 
-class createFole extends React.Component{
+class createFole extends React.Component {
 
-    state = { name:"" };
+    state = { name: "" };
 
     componentDidMount() {
         this.refs.input.focus();
@@ -16,20 +16,20 @@ class createFole extends React.Component{
     }
 
     onInputChange = (ev) => {
-        this.setState({name:ev.target.value});
+        this.setState({ name: ev.target.value });
     }
 
     onSubmit = async (ev) => {
         await ev.preventDefault();
-        await this.props.createFolder(this.state.name,this.props.folderId);
+        await this.props.createFolder(this.state.name, this.props.folderId);
         this.hide();
     }
 
     render() {
         return (
-            <div style={{border:"1px solid #4fc4ff"}} className="card mt-3">
+            <div style={{ border: "1px solid #4fc4ff" }} className="card mt-3">
                 <form onSubmit={this.onSubmit}>
-                    <div style={{padding:"0px 10px"}} className="row align-items-center">
+                    <div style={{ padding: "0px 10px" }} className="row align-items-center">
                         <div className="col-lg-9 col-md-7">
                             <div className="card-item-input">
                                 <input ref="input" onChange={this.onInputChange} value={this.state.name} className="input w-100" type="text" placeholder="Enter Folder Name" required />
@@ -53,4 +53,4 @@ class createFole extends React.Component{
 }
 
 
-export default connect(null,{ createFolder })(createFole);
+export default connect(null, { createFolder })(createFole);

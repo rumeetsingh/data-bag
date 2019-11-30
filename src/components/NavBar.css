@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 
-.nav{
-    border-bottom: 1px solid #dbdbdb;
+.nav {
+  border-bottom: 1px solid #dbdbdb;
 }
 
-.nav-link{
-    text-decoration: none;
-    color: #0068de;
+.nav-link {
+  text-decoration: none;
+  color: #0068de;
 }
 
-.nav-logo{
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
-    padding: 20px;
+.nav-logo {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  padding: 20px;
 }

@@ -6,14 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder } from '@fortawesome/free-solid-svg-icons'
 
 
-class FoldersList extends React.Component{
+class FoldersList extends React.Component {
 
     renderFoldersList = () => {
 
-        if (this.props.folders[this.props.folderId].folders.length===0){
+        if (this.props.folders[this.props.folderId].folders.length === 0) {
             return (
                 <div className="col-md-3">
-                    <div style={{padding:"10px"}} className="mt-3">No Folders Here!</div>
+                    <div style={{ padding: "10px" }} className="mt-3">No Folders Here!</div>
                 </div>
             );
         }
@@ -24,7 +24,7 @@ class FoldersList extends React.Component{
                     <Link className="no-link-style" to={"/" + fol}>
                         <div className="card-folder no-select mt-3 cursor-pointer">
                             <div className="card-item-folder">
-                                <FontAwesomeIcon icon={faFolder} /> | {_.truncate(this.props.folders[fol].name,{ length:20 })}
+                                <FontAwesomeIcon icon={faFolder} /> | {_.truncate(this.props.folders[fol].name, { length: 20 })}
                             </div>
                         </div>
                     </Link>
@@ -35,7 +35,7 @@ class FoldersList extends React.Component{
 
     render() {
         return (
-            <div style={{padding:"20px"}} className="card mt-3">
+            <div style={{ padding: "20px" }} className="card mt-3">
                 <div className="card-lg-header">
                     Folders
                 </div>
@@ -49,7 +49,7 @@ class FoldersList extends React.Component{
 
 
 const mapStateToProps = state => ({
-    folders : state.folders,
+    folders: state.folders,
 })
 
-export default connect(mapStateToProps,{})(FoldersList);
+export default connect(mapStateToProps, {})(FoldersList);

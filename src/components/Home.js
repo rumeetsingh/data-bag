@@ -13,28 +13,28 @@ import FoldersList from './HomeComponents/FoldersList';
 import Bread from './HomeComponents/Bread';
 
 
-class Home extends React.Component{
+class Home extends React.Component {
 
-    state = { ready:false,createNew:null };
+    state = { ready: false, createNew: null };
 
     componentDidMount = () => {
-        if (_.has(this.props.folders,this.props.match.params.folderId)){
-            this.setState({ready:true});
-        }else{
+        if (_.has(this.props.folders, this.props.match.params.folderId)) {
+            this.setState({ ready: true });
+        } else {
             history.push('/home');
-            this.setState({ready:true});
+            this.setState({ ready: true });
         }
     }
 
     renderBread = () => {
-        if(!this.state.ready){
+        if (!this.state.ready) {
             return null;
         }
 
         let parent = this.props.folders[this.props.match.params.folderId].parentFolder;
         let bread = [this.props.match.params.folderId,];
 
-        while (parent!=null){
+        while (parent != null) {
             bread.unshift(parent);
             parent = this.props.folders[parent].parentFolder;
         }
@@ -43,27 +43,27 @@ class Home extends React.Component{
     }
 
     hideCreate = () => {
-        this.setState({createNew:null})
+        this.setState({ createNew: null })
     }
 
     createFolderHandler = () => {
-        this.setState({createNew:"folder"});
+        this.setState({ createNew: "folder" });
     }
 
     createFileHandler = () => {
-        this.setState({createNew:"file"});
+        this.setState({ createNew: "file" });
     }
 
     createInputRender = () => {
-        if (this.state.createNew==="folder"){
+        if (this.state.createNew === "folder") {
             return <CreateFolder folderId={this.props.match.params.folderId} handle={() => this.hideCreate()} />;
-        }else if(this.state.createNew==="file"){
+        } else if (this.state.createNew === "file") {
             return <CreateFile folderId={this.props.match.params.folderId} handle={() => this.hideCreate()} />
         }
     }
 
     renderBackButton = () => {
-        if (this.props.folders[this.props.match.params.folderId].parentFolder!==null){
+        if (this.props.folders[this.props.match.params.folderId].parentFolder !== null) {
             return (
                 <div className="card-item">
                     <Link to={"/" + this.props.folders[this.props.match.params.folderId].parentFolder} className="no-link-style">
@@ -75,7 +75,7 @@ class Home extends React.Component{
     }
 
     render() {
-        if(!this.state.ready){
+        if (!this.state.ready) {
             return null;
         }
         return (
@@ -105,8 +105,8 @@ class Home extends React.Component{
 
 const mapStateToProps = state => {
     return {
-        folders : state.folders,
+        folders: state.folders,
     }
 }
 
-export default connect(mapStateToProps,{})(Home);
+export default connect(mapStateToProps, {})(Home);

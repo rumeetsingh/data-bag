@@ -4,5 +4,5 @@ import fileReducer from './fileReducer';
 
 export default combineReducers({
     folders: folderReducer,
-    files : fileReducer,
+    files: fileReducer,
 });
